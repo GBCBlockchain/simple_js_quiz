@@ -57,11 +57,10 @@ Note : An Armstrong number of three digits is an integer such that the sum of th
 
 10. Write a JavaScript program to construct the following pattern, using a nested for loop. 
 
-*  
-* *  
-* * *  
-* * * *  
-* * * * *  
-
+`*`  
+`* *`  
+`* * *`  
+`* * * *`  
+`* * * * *`  
 
 11. Write a JavaScript program to sum the multiples of 3 and 5 under 1000.  
