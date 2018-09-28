@@ -170,3 +170,43 @@ function summults(){
         }
     console.log("The sum is " + sum);
 }
+
+///TEST THREE STARTS HERE
+//Write a JavaScript function to validate whether a given value type is boolean or not. Go to the editor
+function isbool(varr){
+    return (typeof(varr)=="boolean")
+}
+
+//Write a JavaScript function to validate whether a given value type is error or not.
+function iserror(varr){
+    return (typeof(varr)=="error")
+}
+
+//Write a JavaScript function to validate whether a given value type is NaN or not.
+function is_NaN(varr){
+    return (isNaN(varr))
+}
+
+//Write a JavaScript function to validate whether a given value type is null or not.
+function isnull(varr){
+    return (varr==null)
+}
+
+//Write a JavaScript function to validate whether a given value is number or not.
+function isnumber(varr){
+    return (typeof(varr)=="number")
+}
+
+//Write a JavaScript function to validate whether a given value type is char or not
+function ischar(varr){
+    return (typeof(varr)=="string" && varr.length==1)
+}
+
+//Write a JavaScript function to check whether given value types are same or not.
+function ischar(varr,varr2){
+    return (typeof(varr)==typeof(varr2))
+}
+
+
+
+///TEST TWO STARTS HERE
