@@ -245,3 +245,40 @@ function changeContent(row, col, str) {
 }
 
 // lab2, 7
+function createTable(row, col) {
+    var table = document.getElementById('myTable');
+    for (var r=0; r < row; r++) {
+        var newRow = table.insertRow(r);
+        for (var c=0; c < col; c++) {
+            var newCell = newRow.insertCell(c);
+            newCell.innerHTML = r + "-" + c;
+        }
+    }
+}
+
+// lab2, 8
+function removecoolor() {
+    var x = document.getElementById("colorSelect");
+    x.remove(x.selectedIndex);
+}
+
+// lab2, 9
+function countOptions() {
+    ​return document.getElementById("mySelect").options.length;
+}
+
+// lab2 10
+function volumeOfSphere(radius){
+    return (4/3) * Math.PI * (radius * radius * radius);
+}
+
+//lab2 11
+function randImage() {
+    var arry = {"http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg", width: "240", height: "160", 
+    "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg", width: "320", height: "195",
+    "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg", width: "500", height: "343"}
+    var randint = Math.floor(Math.random() * 3);
+    window.location = arry[randint];
+}
+
+// lab2, 12
