@@ -125,7 +125,7 @@ function nestedloop () {
 // lab1, 11
 function multsum() {
     var sum = 0;
-    for (var s=0; s<5; s++) {
+    for (var s=0; s<1000; s++) {
         if ((s % 3) === 0) && ((s % 5) === 0) {
             sum += s;
         }
@@ -282,3 +282,4 @@ function randImage() {
 }
 
 // lab2, 12
+function hoverBold
