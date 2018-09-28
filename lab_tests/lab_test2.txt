@@ -1,6 +1,6 @@
 1. Here is a sample html file with a submit button. Now modify the style of the paragraph text through javascript code. Go to the editor
 Sample HTML file :
-`
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +15,7 @@ onclick="js_style()">Style</button>
 </div>
 </body>
 </html>
-`
+
 Clicking on the button the font, font size, and color of the paragraph text will be changed.
 
 
