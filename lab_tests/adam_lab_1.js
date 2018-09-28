@@ -1,5 +1,5 @@
 // lab1, 1
-function larger(number1, number2) {
+function larger (number1, number2) {
     if (number1 > number2) {
         return number1;
     } else {
@@ -196,4 +196,52 @@ function isSame (something, something2) {
 
 
 // lab2, 1
+function modPara() {
+    document.getElementById("text").textContent="Consider your paragraph modified.";
+}
+modPara();
 
+// lab2, 2
+function firstLast() {
+    var firstName = document.getElementsByName("fname")[0].value;
+    var lastName = document.getElementsByName("lname")[0].value;
+    var rearray = [firstName, lastName];
+    return rearry;
+}
+
+// lab2, 3
+function backgroundColor() {
+    paras = docBody.getElementsByTagName("p");
+    for (var t=0; t < paras.length; t++) {
+        paras[t].style.backgroundColor = "red";
+    }
+}
+
+// lab2, 4
+function getAttributes() {
+    var hreflang = document.getElementById("w3r").hreflang;
+    var href = document.getElementById("w3r").href;
+    var rel = document.getElementById("w3r").rel;
+    var target = document.getElementById("w3r").target;
+    var type = document.getElementById("w3r").type;
+    var rearray = [hreflang, href, rel, target, type];
+    return rearry;
+}
+
+// lab2, 5
+function addRow() {
+    var table = document.getElementById("sampleTable");
+    var newRow = table.insertRow(0);
+    var newCell1 = newRow.insertCell(0);
+    var newCell2 = newRow.insertCell(1);
+    newCell1.innerHTML = "New Cell 1.";
+    newCell2.innerHTML = "New Cell 2.";
+}
+
+// lab2, 6
+function changeContent(row, col, str) {
+    var table = document.getElementById('myTable');
+    myTable.rows[row].cells[col].innerHTML = str;
+}
+
+// lab2, 7
