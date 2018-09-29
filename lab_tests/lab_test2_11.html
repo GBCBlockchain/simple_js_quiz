@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>display a random image</title>
+    <script type="text/javascript">
+        function DisplayImg() {
+            var random_images_array = ["http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
+                "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg",
+                "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg"];
+            let num = Math.floor(Math.random() * random_images_array.length);
+            document.getElementById('img').src = random_images_array[num];
+        } 
+    </script>
+</head>
+
+<body>
+    <form action="" method="post" id="MyForm">
+        <input type="button" value="display a random image" id="submit" onclick="DisplayImg()"><br>
+        <img id="img">
+    </form>
+</body>
+
+</html>
