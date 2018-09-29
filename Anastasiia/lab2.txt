@@ -1,0 +1,132 @@
+LAB 2
+
+1. Here is a sample html file with a submit button. Now modify the style of the paragraph text through javascript code. Go to the editor
+
+Sample HTML file :
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS DOM paragraph style</title>
+<script src="style.js"></script>
+</head> 
+<body>
+<p id ='text'>JavaScript Exercises - </p> 
+<div>
+<button id="jsstyle"
+onclick="js_style()">Style</button>
+</div>
+</body>
+</html>
+
+function js_style() {
+    text.style.fontFamily = "Arial";
+    text.style.fontSize = "14px";
+    text.style.color = "pink";
+    }
+
+
+
+2. Write a JavaScript function to get the values of First and Last name of the following form. Go to the editor
+
+Sample HTML file :
+
+
+function getFormvalue() {
+
+    var firstName = (document.getElementsByName("fname"))[0].value;
+    var secondName = (document.getElementsByName("lname"))[0].value;
+}
+
+3. Write a JavaScript program to set the background color of a paragraph. Go to the editor
+
+function backgroundColor(){
+    document.body.style.backgroundColor = "red";
+}
+
+
+
+4. Here is a sample html file with a submit button. Write a JavaScript function to get the value of the href, hreflang, rel, target, and type attributes of the specified link. Go to the editor
+
+
+
+
+
+
+5. Write a JavaScript function to add rows to a table. Go to the editor
+
+Sample HTML file :
+
+function insert_Row() {
+    var x = document.getElementById('sampleTable').insertRow(0);
+    x.insertCell(0).innerHTML = "Cell 1";
+    x.insertCell(1).innerHTML = "Cell 2";
+   }
+
+
+
+6. Write a JavaScript function that accept row, column, (to identify a particular cell) and a string to update the content of that cell. Go to the editor
+
+Sample HTML file :
+
+function changeContent() {
+  rn = window.prompt("Input the Row number(0,1,2)", "0");
+  cn = window.prompt("Input the Column number(0,1)","0");
+  content = window.prompt("Input the Cell content");  
+  var x=document.getElementById('myTable').rows[parseInt(rn,10)].cells;
+  x[parseInt(cn,10)].innerHTML=content;
+}
+
+7. Write a JavaScript function that creates a table, accept row, column numbers from the user, and input row-column number as content (e.g. Row-0 Column-0) of a cell. Go to the editor
+
+Sample HTML file :
+function createTable() {
+  rn = window.prompt("Input number of rows", 1);
+  cn = window.prompt("Input number of columns",1);
+  
+   for(var r=0;r<parseInt(rn,10);r++) {
+     var x=document.getElementById('myTable').insertRow(r);
+     }
+     for(var c=0;c<parseInt(cn,10);c++) {
+     var y=  x.insertCell(c);
+     y.innerHTML="Row-"+r+" Column-"+c; 
+    }
+}
+
+8. Write a JavaScript program to remove items from a dropdown list. Go to the editor
+
+Sample HTML file :
+function removecolor() {
+var x=document.getElementById("colorSelect");
+x.remove(x.selectedIndex);
+}
+
+9. Write a JavaScript program to count and display the items of a dropdown list, in an alert window. Go to the editor
+
+Sample HTML file :
+function getOptions() {
+    var len = document.getElementById("mySelect").length;
+    var val = document.getElementById("mySelect");
+    var res = " ";
+    for (var i = 0; i < val.length; i++) {
+    res += val.options[i].text + " "  ;
+    }
+    alert(res + "There are " + len + " items in the list");
+    }
+
+10. Write a JavaScript program to calculate the volume of a sphere. Go to the editor
+
+Sample Output of the form :
+
+
+
+11. Write a JavaScript program to display a random image (clicking on a button) from the following list. Go to the editor
+
+Sample Image information :
+function randImage() {
+    var arry = {"http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg", width: "240", height: "160", 
+    "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg", width: "320", height: "195",
+    "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg", width: "500", height: "343"}
+    var randint = Math.floor(Math.random() * 3);
+    window.location = arry[randint];
+}
