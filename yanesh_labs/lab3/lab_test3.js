@@ -54,6 +54,10 @@ function validateNumber2(value) {
 /*
 6. Write a JavaScript function to validate whether a given value type is char or not
 */
+
+// returns true if value is a single UTF-8 character, false otherwise
+// all characters are strings in javascript.
+// First we check if the input 
 function validateChar(value) {
   //check if value is string and single char
   if (typeof(value) == "string" && value.length == 1){
