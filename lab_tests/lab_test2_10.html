@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculate the volume of a sphere</title>
+    <script type="text/javascript">
+        function caculateVolume() {
+            let volume;
+            let radius = document.getElementById('radius').value;
+            radius = Math.abs(radius);
+            volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
+            document.getElementById('volume').value = volume;
+        } 
+    </script>
+</head>
+
+<body>
+    <form action="" method="post" id="MyForm">
+        Radius:<input type="text" name="radius" id="radius"><br>
+        Volume:<input type="text" name="volume" id="volume" disabled><br>
+        <input type="button" value="Calculate" id="submit" onclick="caculateVolume()"> </form>
+</body>
+
+</html>
