@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>Calculate sphere volume</title>
+	</head>
+	<body>
+		<form>
+			<input type="text" id="radius" placeholder="Radius value">
+			<input type="button" onclick="getSphereVolume()" value="Calculate Volume">
+		</form>
+		<br>
+		<div>
+			Volume of sphere = <span id="result"></span>
+		</div>
+	</body>
+
+	<!-- 10. Write a JavaScript program to calculate the volume of a sphere. Go to the editor -->
+	<script>
+		function getSphereVolume() {
+			let r = document.querySelector('#radius').value;
+
+			if (!isNaN(r) && r > 0) {
+				let v = (4 / 3) * Math.PI * (r ** 3);
+				document.querySelector('#result').innerHTML = v;
+			} else {
+				alert("Radius value must be a positive number.");
+			}
+		}
+	</script>
+</html>

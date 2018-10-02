@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>Highlight bold words</title>
+	</head>
+	<body>
+		<p id="trigger">
+			[On mouse over here bold words of the following paragraph will be highlighted]
+		</p>
+		<p id="paragraph">
+			We have just started <b>this</b> section for the <b>users</b> (beginner to <b>intermediate</b>) who want to work with various <b>JavaScript problems</b> and write <b>scripts</b> online to test their <b>JavaScript skill</b>.
+		</p>
+	</body>
+
+	<!-- 12. Write a JavaScript program to highlight the bold words of the following paragraph, on mouse over a certain link. Go to the editor -->
+	<script>
+		var trigger = document.querySelector("#trigger");
+		var boldWords = document.querySelectorAll("#paragraph > b");
+
+		// Highlight event when the mouse is over the trigger text
+		trigger.addEventListener("mouseover", function() {
+			boldWords.forEach(b => b.style.backgroundColor = "pink");
+		});
+
+		// Un-highlight when the mouse leaves the trigger text area
+		trigger.addEventListener("mouseout", function() {
+			boldWords.forEach(b => b.style.backgroundColor = "");
+		})
+	</script>
+</html>

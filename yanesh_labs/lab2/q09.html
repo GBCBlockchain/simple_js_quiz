@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<style type="text/css">
+			body {margin: 30px;}
+		</style>   
+		<title>Count and display items of a dropdown list - </title>
+	</head>
+	<body>
+		<form>
+		Select your favorite Color :
+		<select id="mySelect">
+			<option>Red</option>
+			<option>Green</option>
+			<option>Blue</option>
+			<option>White</option>
+		</select>
+		<input type="button" onclick="getOptions()" value="Count and Output all items">
+		</form>
+	</body>
+
+	<!-- 9. Write a JavaScript program to count and display the items of a dropdown list, in an alert window. Go to the editor -->
+	<script>
+		function getOptions() {
+			let dropDown = document.querySelector("#mySelect");
+			let string = "";
+
+			string += "Count: " + dropDown.length + "\n\nItems:";
+
+			for (var i = 0; i < dropDown.length; i++) {
+				string += "\n" + (i + 1) + ". " + dropDown[i].value;
+			}
+
+			alert(string);
+		}
+	</script>
+</html>
