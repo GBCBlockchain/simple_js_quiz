@@ -7,9 +7,12 @@
 
 // As a function: 
 function displayMax(a, b) {
-    return (a > b) ? a : b;
+  return (a > b) ? a : b;
 }
-// Can also use Math.Max(a, b) 
+// Can also use Math.Max:
+function displayMathMax(a, b) {
+  return Math.max(a, b);
+}
 
 /*
 2. Write a JavaScript conditional statement to find the sign of product of three numbers. Display an alert box with the specified sign. Go to the editor 
@@ -17,8 +20,8 @@ Sample numbers : 3, -7, 2
 Output : The sign is - 
 */
 function productSign(a, b, c) {
-    let result = a * b * c;
-    alert("The sign is " + (result < 0) ? "-" : "+");
+  let result = a * b * c;
+  alert("The sign is " + (result < 0) ? "-" : "+");
 }
 
 /*
@@ -40,7 +43,7 @@ Output : 0
 function findLargest(a, b, c, d, e) {
   let nums = [a, b, c, d, e];
   nums.sort(function (x, y) { return y - x; });
-  alert(nums[0]);
+  alert(nums[0]);   // First integer in sorted array is largest
 }
 
 /*
@@ -131,11 +134,53 @@ function fizzBuzz() {
 "Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers, while those that do not end in 1 are unhappy numbers (or sad numbers)". 
 Write a JavaScript program to find and print the first 5 happy numbers. Go to the editor 
 */
+function fiveHappyNumbers() {
+  let num = 1;
+  let result = [];
+  
+  // Loop until we get 5 results
+  while (result.length < 5) {
+
+    let numArray = num.toString().split('');
+
+    // Loop through number and sum squared digits
+    do {
+      let sum = 0;
+      numArray.forEach((i) => {
+        sum += parseInt(i) ** 2;
+      });
+      numArray = sum.toString().split('');
+    } while (numArray.length > 1);
+
+    // if happy, add to results array
+    if(numArray[0] === "1") {
+      result.push(num);
+    }
+    num++;
+  }
+  console.log(result);
+}
+
 
 /*
 9. Write a JavaScript program to find the armstrong numbers of 3 digits. Go to the editor 
 Note : An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself. For example, 371 is an Armstrong number since 3**3 + 7**3 + 1**3 = 371. 
 */
+function threeDigitArmstrong() {
+  let result = [];
+  
+  for (var i = 100; i < 1000; i++) {
+    let digitArray = i.toString().split('');
+    let d1 = parseInt(digitArray[0]);
+    let d2 = parseInt(digitArray[1]);
+    let d3 = parseInt(digitArray[2]);
+    
+    if ((d1**3 + d2**3 + d3**3) == i) {
+      result.push(i);
+    }
+  }
+  console.log(result);
+}
 
 /*
 10. Write a JavaScript program to construct the following pattern, using a nested for loop. Go to the editor
