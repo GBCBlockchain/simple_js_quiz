@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>Change the content of a cell</title>
+	</head>
+	<body>
+		<table id="myTable" border="1">
+			<tr>
+				<td>Row1 cell1</td>
+				<td>Row1 cell2</td>
+			</tr>
+			<tr>
+				<td>Row2 cell1</td>
+				<td>Row2 cell2</td>
+			</tr>
+			<tr>
+				<td>Row3 cell1</td>
+				<td>Row3 cell2</td>
+			</tr>
+		</table>
+		<br>
+		<form>
+			<input type="text" id="tableRow" placeholder="Row number"><br>
+			<input type="text" id="tableCol" placeholder="Column number"><br>
+			<input type="text" id="cellContent" placeholder="Cell content"><br>
+			<input type="button" onclick="changeContent()" value="Change content">
+		</form>
+	</body>
+
+	<!-- 6. Write a JavaScript function that accept row, column, (to identify a particular cell) 
+	and a string to update the content of that cell. Go to the editor -->
+	<script>
+		function changeContent() {
+			let row = document.querySelector('#tableRow').value;
+			let col = document.querySelector('#tableCol').value;
+			let cellContent = document.querySelector('#cellContent').value;
+
+			if (!isNaN(row) && !isNaN(col) && cellContent) {
+				document.querySelector('#myTable').rows[row].cells[col].innerHTML = cellContent;
+			} else {
+				alert("Wrong parameters");
+			}
+		}
+	</script>
+</html>
