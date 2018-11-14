@@ -27,6 +27,7 @@ function findSign(a, b, c){
 //Write a JavaScript conditional statement to sort three numbers. Display an alert box to show the result. Go to the editor 
 //Sample numbers : 0, -1, 4 Output : 4, 0, -1
 
+    
     let largest, middle; smallest;
     if (x > y){
         if (x > z){
@@ -54,55 +55,70 @@ function findSign(a, b, c){
 
 //Write a JavaScript conditional statement to find the largest of five numbers. Display an alert box to show the result. Go to the editor 
 //Sample numbers : -5, -2, -6, 0, -1 Output : 0
-    var large;
-    if(a >= b){
-        if(a >= c){
-            if(a >= d){
-                if(a >= e){
-                    large = a;
-                }else{
-                    large = e;
-                }
-            }else if(d >= e){
-                large = d;
-            }else{
-                large = e;
-            }
-        }else if(c >= d){
-            if (c >= e){
-                large = c;
-            }else{
-                large = e;
-            }
-        }else if(d >= e){
-            large = d;
-        }else{
-            large = e;
-        }
-    }else if(b >= c){
-        if(b >= d){
-            if(b >= e){
-                large = b;
-            }else{
-                large = e;
-            }
-        }else if(d >= e){
-            large = d;
-        }else{
-            large = e;
-        }
-    }else if(c >= d){
-        if(c >= e){
-            large = c;
-        }else{
-            large = d;
-        }
-    }else if(d >=e){
-        large = d;
-    }else{
-        large = e;
-    }
-    alert(large);
+var largest;
+if (a >= b && a >= c && a >= d && a >= e){
+    largest = a;
+}else if (b >= c && b >= d && b >= e){
+    largest = b;
+}else if (c >= d && c >= e){
+    largest = c;
+}else if (d >= e){
+    largest = d;
+}else{
+    largest = e;
+}
+alert(largest);
+
+// Version 2 but too long
+    // var large;
+    // if(a >= b){
+    //     if(a >= c){
+    //         if(a >= d){
+    //             if(a >= e){
+    //                 large = a;
+    //             }else{
+    //                 large = e;
+    //             }
+    //         }else if(d >= e){
+    //             large = d;
+    //         }else{
+    //             large = e;
+    //         }
+    //     }else if(c >= d){
+    //         if (c >= e){
+    //             large = c;
+    //         }else{
+    //             large = e;
+    //         }
+    //     }else if(d >= e){
+    //         large = d;
+    //     }else{
+    //         large = e;
+    //     }
+    // }else if(b >= c){
+    //     if(b >= d){
+    //         if(b >= e){
+    //             large = b;
+    //         }else{
+    //             large = e;
+    //         }
+    //     }else if(d >= e){
+    //         large = d;
+    //     }else{
+    //         large = e;
+    //     }
+    // }else if(c >= d){
+    //     if(c >= e){
+    //         large = c;
+    //     }else{
+    //         large = d;
+    //     }
+    // }else if(d >=e){
+    //     large = d;
+    // }else{
+    //     large = e;
+    // }
+    // alert(large);
     
     
 //Write a JavaScript for loop that will iterate from 0 to 15. For each iteration, it will check if the current number
